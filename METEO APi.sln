@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "METEO APi", "METEO APi\METEO APi.csproj", "{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ressource", "Ressource", "{B1E2FDD4-2D88-418D-8A34-8C807634ED95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{59F7FCB6-73A1-43EB-9D9A-E0731F96A224}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\partially-cloudy.png = ..\..\..\Downloads\partially-cloudy.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59F7FCB6-73A1-43EB-9D9A-E0731F96A224} = {B1E2FDD4-2D88-418D-8A34-8C807634ED95}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB69CA06-FA51-40AE-B378-BFD1D6E8E883}
+	EndGlobalSection
+EndGlobal
