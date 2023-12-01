@@ -11,7 +11,9 @@
         <Grid>
 
             <Grid.ColumnDefinitions>
+
                 <ColumnDefinition Width="2*"/>
+
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
@@ -33,7 +35,8 @@
 
 
 
-            <Border Background="#2f5cb6"/>
+            <Border Background="#2f5cb6">
+            </Border>
             <Border Grid.Column ="1" Background="#152951"/>
             <Border Grid.Column ="3" Background="#152951"/>
             <Border Grid.Column="1" Grid.Row="1" Background="#2f5cb6"/>
@@ -51,42 +54,40 @@
 
                 <TextBlock x:Name="TempToday" Foreground="White" FontSize="20" Text="Today - 64° F"/>
                 <TextBlock x:Name="meteoNuage" Foreground="White" FontSize="20" Text="Partially Cloudy"/>
-                <TextBlock x:Name="Precipitation" Foreground="White" FontSize="20" Text="Precipitation: 25%"/>
+                
             </StackPanel>
             <StackPanel Grid.Column="1" Margin="40,181,0,0" VerticalAlignment="Bottom" Height="108" HorizontalAlignment="Center">
 
                 <TextBlock x:Name="TempToday2" Foreground="White" FontSize="20" Text="Today - 64° F"/>
                 <TextBlock x:Name="meteoNuage2" Foreground="White" FontSize="20" Text="Partially Cloudy"/>
-                <TextBlock x:Name="Precipitation2" Foreground="White" FontSize="20" Text="Precipitation: 25%"/>
             </StackPanel>
 
             <StackPanel Grid.Column="2" Margin="40,181,0,0" VerticalAlignment="Bottom" Height="108" HorizontalAlignment="Center">
 
                 <TextBlock x:Name="TempToday3" Foreground="White" FontSize="20" Text="Today - 64° F"/>
                 <TextBlock x:Name="meteoNuage3" Foreground="White" FontSize="20" Text="Partially Cloudy"/>
-                <TextBlock x:Name="Precipitation3" Foreground="White" FontSize="20" Text="Precipitation: 25%"/>
             </StackPanel>
 
             <StackPanel Grid.Column="3" Margin="40,181,0,0" VerticalAlignment="Bottom" Height="108" HorizontalAlignment="Center">
 
                 <TextBlock x:Name="TempToday4" Foreground="White" FontSize="20" Text="Today - 64° F"/>
                 <TextBlock x:Name="meteoNuage4" Foreground="White" FontSize="20" Text="Partially Cloudy"/>
-                <TextBlock x:Name="Precipitation4" Foreground="White" FontSize="20" Text="Precipitation: 25%"/>
             </StackPanel>
 
             <StackPanel Grid.Column="4" Margin="40,181,0,0" VerticalAlignment="Bottom" Height="108" HorizontalAlignment="Center">
 
                 <TextBlock x:Name="TempToday5" Foreground="White" FontSize="20" Text="Today - 64° F"/>
                 <TextBlock x:Name="meteoNuage5" Foreground="White" FontSize="20" Text="Partially Cloudy"/>
-                <TextBlock x:Name="Precipitation5" Foreground="White" FontSize="20" Text="Precipitation: 25%"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="0" Margin="20,213,20,0" VerticalAlignment="Top">
-                <ComboBox x:Name="City" Foreground="White" FontSize="20" Text="TUNIS"/>
 
-            </StackPanel>
+            <ComboBox x:Name="City"  Grid.Column="0"  VerticalAlignment="Top" Grid.Row="0"  FontSize="20 " Text="TUNIS"  Height="40" Margin="40,118,42,0"/>
+            <Button x:Name="AddCity" Content="Add" Foreground="#152951" FontSize="20"  Height="33" Margin="140,200,10,150"/>
+            <Button x:Name="RemoveCity" Grid.Column="0" Grid.Row="0" Content="Remove" Foreground="#152951" FontSize="20"  Height="30" Margin="30,200,130,150"/>
 
-            <Image Margin="40,5,20,170" Source="C:\Users\SLAB65\Downloads\partially-cloudy.png"/>
+
+
+            <Image Margin="40,5,61,300" Source="C:\Users\SLAB65\Downloads\partially-cloudy.png"/>
 
 
 
@@ -94,35 +95,36 @@
             HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Name="HighTemp" Foreground="White" FontSize="20" Text="High: 66°" Margin="0,0,20,0"/>
                 <TextBlock Name="LowTemp" Foreground="White" FontSize="20" Text="Low: 43°" Margin="0,0,20,0"/>
-                <TextBlock Name="TempRessenti" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
+                <TextBlock Name="Humidité" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
             </StackPanel>
+            
 
             <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"
             HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Name="HighTemp2" Foreground="White" FontSize="20" Text="High: 66°" Margin="0,0,20,0"/>
                 <TextBlock Name="LowTemp2" Foreground="White" FontSize="20" Text="Low: 43°" Margin="0,0,20,0"/>
-                <TextBlock Name="TempRessenti2" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
+                <TextBlock Name="Humidité2" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"
                        >
                 <TextBlock Name="HighTemp3" Foreground="White" FontSize="20" Text="High: 66°" Margin="0,0,20,0"/>
                 <TextBlock Name="LowTemp3" Foreground="White" FontSize="20" Text="Low: 43°" Margin="0,0,20,0"/>
-                <TextBlock Name="TempRessenti3" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
+                <TextBlock Name="Humidité3" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"
                        >
                 <TextBlock Name="HighTemp4" Foreground="White" FontSize="20" Text="High: 66°" Margin="0,0,20,0"/>
                 <TextBlock Name="LowTemp4" Foreground="White" FontSize="20" Text="Low: 43°" Margin="0,0,20,0"/>
-                <TextBlock Name="TempRessenti4" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
+                <TextBlock Name="Humidité4" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"
                        >
                 <TextBlock Name="HighTemp5" Foreground="White" FontSize="20" Text="High: 66°" Margin="0,0,20,0"/>
                 <TextBlock Name="LowTemp5" Foreground="White" FontSize="20" Text="Low: 43°" Margin="0,0,20,0"/>
-                <TextBlock Name="TempRessenti5" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
+                <TextBlock Name="Humidité5" Foreground="White" FontSize="20" Text="Feels like: 63°"/>
             </StackPanel>
 
 
