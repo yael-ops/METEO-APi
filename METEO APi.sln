@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "METEO APi", "METEO APi\METEO APi.csproj", "{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "METEO APi", "METEO APi\METEO APi.csproj", "{ED2A64C6-1E45-49E2-8BAC-98E0B6D067D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ressource", "Ressource", "{B1E2FDD4-2D88-418D-8A34-8C807634ED95}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{59F7FCB6
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Downloads\partially-cloudy.png = ..\..\..\Downloads\partially-cloudy.png
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{37257E04-9EB2-464F-86E7-420B179489C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +30,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{59F7FCB6-73A1-43EB-9D9A-E0731F96A224} = {B1E2FDD4-2D88-418D-8A34-8C807634ED95}
+		{37257E04-9EB2-464F-86E7-420B179489C2} = {B1E2FDD4-2D88-418D-8A34-8C807634ED95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB69CA06-FA51-40AE-B378-BFD1D6E8E883}
