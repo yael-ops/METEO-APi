@@ -30,12 +30,12 @@ namespace METEO_APi
     {
 
         // Déclarez une liste pour stocker les villes.
-        private List<string> villes = new List<string> { "Annecy" };  // Ajoutez les villes par défaut ici.
+        private List<string> villes = new List<string> { "Annecy","Lyon","Paris" };  // Ajoutez les villes par défaut ici.
         public MainWindow()
         {
            
             InitializeComponent();
-            City.ItemsSource = villes;
+       
 
         _: GetWeather("Annecy");
 
@@ -181,7 +181,7 @@ namespace METEO_APi
         private async void AddCity_Click(object sender, RoutedEventArgs e)
         {
             // Ouvrez une boîte de dialogue pour permettre à l'utilisateur de saisir le nom de la ville.
-            string newCity = Microsoft.VisualBasic.Interaction.InputBox("Enter the name of the city:", "Add New City", "");
+            string newCity = Microsoft.VisualBasic.Interaction.InputBox("Entrer le nom de la ville: ", "Ajouter la ville", "");
 
             // Vérifiez si l'utilisateur a saisi une ville.
             if (!string.IsNullOrEmpty(newCity))
