@@ -30,12 +30,12 @@ namespace METEO_APi
     {
 
         // Déclarez une liste pour stocker les villes.
-        private List<string> villes = new List<string> { "Annecy","Lyon","Paris" };  // Ajoutez les villes par défaut ici.
+        private CityManager cityManager = new CityManager();
         public MainWindow()
         {
            
             InitializeComponent();
-       
+            City.ItemsSource = cityManager.Villes;
 
         _: GetWeather("Annecy");
 
@@ -166,7 +166,7 @@ namespace METEO_APi
                 string selectedCity = City.SelectedItem.ToString();
 
                 // Vérifie si la ville sélectionnée existe dans la liste des villes.
-                if (villes.Contains(selectedCity))
+                if (cityManager.CityExists(selectedCity))
                 {
                     // Appelle la méthode GetMeteo pour obtenir les informations météorologiques pour la ville sélectionnée.
                     await GetWeather(selectedCity);
@@ -186,25 +186,15 @@ namespace METEO_APi
             // Vérifiez si l'utilisateur a saisi une ville.
             if (!string.IsNullOrEmpty(newCity))
             {
-                // Vérifiez si les coordonnées météo de la ville sont valides.
-                bool isValidCoordinates = await CheckValidCoordinates(newCity);
+                // Ajoutez la nouvelle ville à la liste gérée par CityManager
+                cityManager.AddCity(newCity);
 
-                if (isValidCoordinates)
-                {
-                    // Ajoutez la nouvelle ville à la liste.
-                    villes.Add(newCity);
+                // Mettez à jour la source de données de la ComboBox.
+                City.ItemsSource = null;
+                City.ItemsSource = cityManager.Villes;
 
-                    // Mettez à jour la source de données de la ComboBox.
-                    City.ItemsSource = null;
-                    City.ItemsSource = villes;
-
-                    // Sélectionnez la nouvelle ville ajoutée.
-                    City.SelectedItem = newCity;
-                }
-                else
-                {
-                    MessageBox.Show($"Les coordonnées météo de {newCity} ne sont pas valides. Veuillez entrer une ville valide.");
-                }
+                // Sélectionnez la nouvelle ville ajoutée.
+                City.SelectedItem = newCity;
             }
         }
 
@@ -243,12 +233,12 @@ namespace METEO_APi
                 // Obtenez la ville sélectionnée.
                 string selectedCity = City.SelectedItem as string;
 
-                // Supprimez la ville de la liste.
-                villes.Remove(selectedCity);
+                // Supprimez la ville de la liste gérée par CityManager.
+                cityManager.RemoveCity(selectedCity);
 
                 // Mettez à jour la source de données de la ComboBox.
                 City.ItemsSource = null;
-                City.ItemsSource = villes;
+                City.ItemsSource = cityManager.Villes;
 
                 // Sélectionnez la première ville après la suppression.
                 City.SelectedIndex = 0;
@@ -265,7 +255,6 @@ namespace METEO_APi
             }
         }
 
-       
 
     }
 
